@@ -7,24 +7,6 @@ package solc
 #include <stdlib.h>
 #include <libsolc.h>
 
-static char** makeStringArray(int size)
-{
-    return calloc(sizeof(char*), size);
-}
-
-static void setStringArray(char **a, char *s, int n)
-{
-    a[n] = s;
-}
-
-static void freeStringArray(char **a, int size)
-{
-    int i;
-    for (i = 0; i < size; i++)
-    free(a[i]);
-    free(a);
-}
-
 */
 import "C"
 
@@ -32,13 +14,11 @@ import "unsafe"
 
 func License() string {
 	licenseC := C.license()
-	//defer C.free(unsafe.Pointer(licenseC))
 	return C.GoString(licenseC)
 }
 
 func Version() string {
 	versionC := C.version()
-	//defer C.free(unsafe.Pointer(versionC))
 	return C.GoString(versionC)
 }
 
