@@ -1,7 +1,7 @@
 deps: setup libboost libsolc
 
 setup:
-	md dependencies lib include;
+	mkdir dependencies lib include;
 
 libboost: 
 	tar -vxf ./dependencies/boost_1_67_0.tar.gz -C ./dependencies;

@@ -1,9 +1,10 @@
 package solc
 
 /*
-#cgo LDFLAGS: -L${SRCDIR}/lib/ -lsolc -ljsoncpp -ldevcore -lsolidity -levmasm -lboost_filesystem -lboost_regex -lstdc++
+#cgo LDFLAGS: -static-libgcc -static-libstdc++ -L${SRCDIR}/lib -lsolc -lsolidity -levmasm -ldevcore -ljsoncpp -lboost_filesystem -lboost_regex -lboost_system -lstdc++ -lm
 #cgo CFLAGS: -I${SRCDIR}/include/
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <libsolc.h>
 

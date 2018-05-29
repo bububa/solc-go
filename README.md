@@ -1,5 +1,5 @@
 # solc-go
-solidity compiler golang wrapper
+solidity compiler golang wrapper using libsolc.a c API.
 
 ## Installation
 - download boost_1_67_0.tar.gz into dependencies folder;
